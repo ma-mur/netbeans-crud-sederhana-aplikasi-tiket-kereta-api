@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="425" pageHeight="198" whenNoDataType="AllSectionsNoDetail" columnWidth="397" leftMargin="14" rightMargin="14" topMargin="14" bottomMargin="14" uuid="490e54f7-543f-41bd-951a-c9733c232ade">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="per_id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM penumpang WHERE id=$P{per_id}]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="awal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tujuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="berangkat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tiba" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kereta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gerbong" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dewasa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="anak" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="397" height="38" backcolor="#EF6464" uuid="58820559-8e90-4e6e-b5e8-7b4099ed9ad5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[Tiket Kereta Api]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="132">
+			<staticText>
+				<reportElement x="0" y="2" width="84" height="14" uuid="361d32d2-c374-456f-9b4d-944d0c2000ae"/>
+				<text><![CDATA[ID Penumpang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="84" height="14" uuid="212c0df2-3c28-4a1b-8943-7d264227d48f"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="17" width="84" height="14" uuid="649c0b6a-255a-458d-af0c-ee2d7c4dd47c"/>
+				<text><![CDATA[Nama Penumpang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="84" height="14" uuid="5a7fc969-2eb1-47e3-a41d-e08b4c46ca5e"/>
+				<text><![CDATA[Kereta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="62" width="84" height="14" uuid="fa758575-c04d-4748-8bd8-0f5f032bbdf3"/>
+				<text><![CDATA[Kelas, Gerbong]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="93" width="52" height="14" uuid="d815b413-b047-40c7-9a54-fc6ff4189bfd"/>
+				<text><![CDATA[Berangkat :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="93" width="74" height="14" uuid="9040ec11-5010-4cf4-81ec-88a7c461d530"/>
+				<text><![CDATA[Perkiraan Tiba :]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="122" width="397" height="10" forecolor="#EF6464" backcolor="#EF6464" uuid="92d1e4a6-e90d-4fda-952b-84c34888835d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="238" y="22" width="51" height="14" uuid="241b2f68-ce79-4513-85e4-34c1dd92ee21"/>
+				<text><![CDATA[Dewasa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="37" width="51" height="14" uuid="1f87abb3-d39b-423d-b827-d5a0694093d4"/>
+				<text><![CDATA[Anak-anak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="52" width="51" height="14" uuid="045a56eb-cb32-451b-8cb7-8968aa8a4ea7"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="2" width="10" height="14" uuid="43116029-ee82-491a-98d4-8ee48e5bbae1"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="17" width="10" height="14" uuid="be8056e3-ccbd-46d4-9d29-d5cf419f0117"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="32" width="10" height="14" uuid="3745ec47-3b5f-414d-a94c-be53eba211c9"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="47" width="10" height="14" uuid="b49e56ea-838f-4aac-aeff-c1ff83b649c2"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="62" width="10" height="14" uuid="a8a1ea1e-826b-45d7-9c1f-bf78a1a0fdbe"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="22" width="10" height="14" uuid="c688e30f-e14a-42be-bdee-810e617d8122"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="37" width="10" height="14" uuid="eadecf84-e0b7-49d4-936e-f2c72e0f1f6e"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="52" width="10" height="14" uuid="1424d5fb-dabc-413c-b5c9-fa4cd26a7814"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="22" width="31" height="14" uuid="e6d570b6-fa2b-4cb2-9f0c-d3c3346da241"/>
+				<text><![CDATA[Orang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="37" width="31" height="14" uuid="a5f2f19c-401e-434b-adf4-a1fc2894aa22"/>
+				<text><![CDATA[Orang]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="95" y="2" width="100" height="14" uuid="e8b584a2-3d4f-41b2-9bb4-b14def2c6e92"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="32" width="100" height="14" uuid="f52d7a78-b273-4d4c-988a-963c3417e41d"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="17" width="100" height="14" uuid="ff2a063c-bed9-4833-944d-057bb947da3f"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="47" width="100" height="14" uuid="1b7dd536-a9cc-4e14-ad8d-eeeb4ba93ba0"/>
+				<textFieldExpression><![CDATA[$F{kereta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="62" width="100" height="14" uuid="e9dde974-8441-4f2f-be7f-11e1f3f0507d"/>
+				<textFieldExpression><![CDATA[$F{gerbong}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="108" width="111" height="14" uuid="dad170dc-324f-4f7f-b578-0251e2e59988"/>
+				<textFieldExpression><![CDATA[$F{awal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="108" width="74" height="14" uuid="eb369603-dd18-4257-bb95-9b49ffa81fd8"/>
+				<textFieldExpression><![CDATA[$F{berangkat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="107" width="117" height="14" uuid="86958dec-8453-40b5-80d5-5086df81c78c"/>
+				<textFieldExpression><![CDATA[$F{tujuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="107" width="74" height="14" uuid="6093661a-f5f0-4544-8ebb-35f32bc28640"/>
+				<textFieldExpression><![CDATA[$F{tiba}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="52" width="76" height="14" uuid="c57682eb-599a-4a12-a739-a726eb9e1dfa"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="22" width="40" height="14" uuid="da620ffb-bd1c-4bd3-8770-5ccf5d044dca"/>
+				<textFieldExpression><![CDATA[$F{dewasa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="37" width="40" height="14" uuid="faa49ab0-0ee0-4019-8b81-60fbf875e7ff"/>
+				<textFieldExpression><![CDATA[$F{anak}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="209" y="2" width="51" height="14" uuid="3774df69-6af2-43b1-a30d-f38df60654eb"/>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="2" width="117" height="14" uuid="37f0c601-cfb6-4c68-b0ad-a41460fbfbe8"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
